@@ -8,13 +8,13 @@ box.style.left = x + 'px';
 box.style.top = y + 'px';
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowUp') {
+  if (event.key === 'ArrowUp' || event.key === 'w') {
     y -= 10;
-  } else if (event.key === 'ArrowDown') {
+  } else if (event.key === 'ArrowDown' || event.key === 's') {
     y += 10;
-  } else if (event.key === 'ArrowLeft') {
+  } else if (event.key === 'ArrowLeft' || event.key === 'a') {
     x -= 10;
-  } else if (event.key === 'ArrowRight') {
+  } else if (event.key === 'ArrowRight' || event.key === 'd') {
     x += 10;
   }
 
