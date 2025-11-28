@@ -18,7 +18,19 @@ document.addEventListener('keydown', (event) => {
     x += 10;
   }
 
-  // Keep box within screen boundaries
+  // Keep box within screen boundaries on keypress
+  x = Math.max(0, Math.min(x, window.innerWidth - 100));
+  y = Math.max(0, Math.min(y, window.innerHeight - 100));
+
+  box.style.left = x + 'px';
+  box.style.top = y + 'px';
+});
+
+document.addEventListener('click', (event) => {
+  x = event.clientX - 50;
+  y = event.clientY - 50;
+
+  // Keep box within screen boundaries on user click
   x = Math.max(0, Math.min(x, window.innerWidth - 100));
   y = Math.max(0, Math.min(y, window.innerHeight - 100));
 
